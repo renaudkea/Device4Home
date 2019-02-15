@@ -1,9 +1,6 @@
 package dk.kea.device4home.service;
 
-import dk.kea.device4home.model.Callable;
-import dk.kea.device4home.model.Connectable;
-import dk.kea.device4home.model.Device;
-import dk.kea.device4home.model.Wifi;
+import dk.kea.device4home.model.*;
 
 import java.util.List;
 
@@ -46,8 +43,8 @@ public class DeviceService {
 
 
     // Switch all off
-    void switchAllOff(List<Device> devices) {
-        for (Device device : devices) {
+    void switchAllOff(List<Powered> devices) {
+        for (Powered device : devices) {
             device.switchOff();
         }
     }
